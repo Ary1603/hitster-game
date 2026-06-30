@@ -1,6 +1,8 @@
 const { execSync } = require('node:child_process');
 
-const branch = execSync('git rev-parse --abbrev-ref HEAD').toString().trim();
+const branch =
+  process.argv[2] ||
+  execSync('git rev-parse --abbrev-ref HEAD').toString().trim();
 
 const allowedPattern =
   /^(main|develop|feat\/.+|fix\/.+|refactor\/.+|perf\/.+|docs\/.+|test\/.+|style\/.+|build\/.+|ci\/.+|chore\/.+|hotfix\/.+|release\/.+|revert\/.+|delete\/.+)$/;
