@@ -42,7 +42,7 @@ jobs:
           node-version: 22
 
       - name: Validate branch name
-        run: node scripts/validate-branch-name.js
+        run: node scripts/validate-branch-name.cjs
 
   frontend:
     name: Frontend checks
