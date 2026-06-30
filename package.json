@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky",
-    "validate:branch": "node scripts/validate-branch-name.cjs"
+    "validate:branch": "node scripts/validate-branch-name.cjs",
+    "validate:commit": "node scripts/validate-commit-message.cjs"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,json,md,yml,yaml,css}": "prettier --write"
